@@ -7,7 +7,7 @@ from calculator import Calculator
 
 
 @pytest.mark.parametrize("op1, op2, expected", [
-    (2, 5, 7),
+    (2, 5, 8),
     (-3, 3, 0),
     (-2, -4, -6),
     (0, 0, 0),
