@@ -13,3 +13,5 @@ python calculator.py      # przykłady wywołania
 python app.py             # http://127.0.0.1:5000/calculate?op=sum&arg1=2&arg2=5
 pytest -v                 # testy
 ```
+
+Autor: Agata
