@@ -1,3 +1,7 @@
+"""Aplikacja Flask udostępniająca kalkulator przez parametry GET.
+
+Przykład: http://127.0.0.1:5000/calculate?op=sum&arg1=2&arg2=5
+"""
 from flask import Flask, request
 
 from calculator import Calculator
@@ -14,12 +18,14 @@ OPERATIONS = {
 
 @app.route("/")
 def hello_world():
+    """Strona startowa."""
     return "Hello World!"
 
 
 @app.route("/calculate")
 def calculate():
-    op = request.args.get("op")
+    """Wykonuje działanie `op` na argumentach `arg1` i `arg2` z parametrów GET."""
+    op =request.args.get("op")
     if op not in OPERATIONS:
         return f"Nieznana operacja: {op}. Dostępne: {', '.join(OPERATIONS)}", 400
 

@@ -1,9 +1,10 @@
 __pycache__/
 .venv/
 .vscode/
+.idea/
 *.pyc
 
 # pytest / coverage
+# (htmlcov/ celowo NIE jest ignorowany - raport pokrycia ma byc w repozytorium)
 .pytest_cache/
 .coverage
-htmlcov/
