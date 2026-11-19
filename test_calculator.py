@@ -7,7 +7,7 @@ from calculator import Calculator
 
 
 @pytest.mark.parametrize("op1, op2, expected", [
-    (2, 5, 8),
+    (2, 5, 7),
     (-3, 3, 0),
     (-2, -4, -6),
     (0, 0, 0),
@@ -91,3 +91,14 @@ def test_examples_run_without_errors(capsys):
     assert "10 + 4 = 14" in output
     assert "10 / 4 = 2.5" in output
     assert "10 / 0 -> błąd: Nie można dzielić przez zero" in output
+
+
+@pytest.mark.parametrize("a, b, expected", [
+    (2, 3, 5),
+    (-1, -2, -3),
+    (2.5, 3.5, 6.0),
+])
+def test_add_parametrized(a, b, expected):
+    """Test sparametryzowany z instrukcji (add() -> sum(), bez self, bo testy nie są w klasie)."""
+    calc = Calculator(a, b)
+    assert calc.sum() == expected
